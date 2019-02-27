@@ -10,17 +10,17 @@
 ## API
 > 注册事件的监听函数
 ```
-- on(event, fn, [contexgt]): this;
+- on(event, fn, [context]): this;
 ```
-- `event`：事件
+- `event`：事件名称
 - `fn`：事件监听函数
 - `[context]`：监听函数的执行上下文
 
 > 注册执行一次的实践监听函数
 ```
-- once(event, fn, [contexgt]): this;
+- once(event, fn, [context]): this;
 ```
-- `event`：事件
+- `event`：事件名称
 - `fn`：事件监听函数
 - `[context]`：监听函数的执行上下文
 
@@ -28,7 +28,7 @@
 ```
 - off(event, fn): this;
 ```
-- `event`：事件
+- `event`：事件名称
 - `fn`：事件的监听函数
 
 > 移除事件的所有监听函数
@@ -51,7 +51,7 @@
 
 > 返回注册事件的所有回调函数
 ```
-- listeners(event, [withContext]): fn[];
+- listeners(event, [withContext: boolean]): fn[];
 ```
 - `event`：事件名称
 - `[withContext]`：是否返回绑定上下文的回调函数（默认：false）
